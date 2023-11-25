@@ -20,4 +20,4 @@ MANIFEST
 
 # Blueprint files
 DATA.txt
-EVENT.txt
+EVENT.py
