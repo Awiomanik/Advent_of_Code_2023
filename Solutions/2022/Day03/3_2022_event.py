@@ -1,9 +1,9 @@
-# ADVENT OF CODE 2023
+# ADVENT OF CODE 2022
 # WOJCIECH KOŚNIK-KOWALCZUK
-# DAY: (test event from 2022)
+# DAY: 3
 
 # PARAMETERS
-data_path = "test_data.txt"
+data_path = "3_2022_data.txt"
 
 # GET DATA
 data = []

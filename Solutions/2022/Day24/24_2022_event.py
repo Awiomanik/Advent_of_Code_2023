@@ -1,6 +1,6 @@
-# ADVENT OF CODE 2023
+# ADVENT OF CODE 2022
 # WOJCIECH KOŚNIK-KOWALCZUK
-# DAY: (test from 2022)
+# DAY: 24
 
 
 from time import sleep
@@ -10,7 +10,7 @@ import gc
 
 
 # PARAMETERS
-data_path = "test3_data.txt"
+data_path = "24_2022_data.txt"
 
 expedition_char = "\u2603"
 blizzard_char = "\u2600"

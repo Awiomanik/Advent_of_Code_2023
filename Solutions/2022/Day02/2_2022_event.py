@@ -1,6 +1,6 @@
-# ADVENT OF CODE 2023
+# ADVENT OF CODE 2022
 # WOJCIECH KOŚNIK-KOWALCZUK
-# DAY: (solution from 02.12.2022)
+# DAY: 2
 
 # PARAMETERS
 data_path = "2_2022_data.txt"
