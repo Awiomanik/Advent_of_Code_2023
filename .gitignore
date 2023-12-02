@@ -18,6 +18,10 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Blueprint files
+# 2023 solutions
+# delete when rady to post
 DATA.txt
 EVENT.py
+
+# notebooks for testing
+TEST.ipynb
