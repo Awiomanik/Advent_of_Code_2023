@@ -97,6 +97,8 @@ split(ex, str, max) same as bulit-in split (max - maximum matches)
 
 sub(ex, str, str)   replace match with str
 
+compile(ex)     compiles expression to RegEx pattern
+
 
 METHODS ON MATCH OBJECT:
 
@@ -111,8 +113,6 @@ groupdict()     returns dict of groups keyed by their names
 start()         returns index of start of first match
 end()           returns index of end of first match
 span()          returns (start(), end())
-
-compile(ex)     compiles expression to RegEx pattern
 '''
 
 # EXAMPLES
@@ -123,11 +123,11 @@ ip = "111.002.034.234"
 print(re.sub("\.[0]*", ".", ip))
 
 print("\nCheck for a number at the end of a string")
-string =  "43y5sdjhb kjcn  sdkj9"
+string =  "43y5sdjhb kjcn  sdk89"
 print(True if re.match(".*[0-9]$", string) else False)
 
 print("\nCheck what number at the end of string if any")
-print(string[-1] if re.match(".*[0-9]$", string) else False)
+print(string[-1] if re.match(".*[0-9]+$", string) else False) # find len of number
 
 print("\nSearch for numbers (0-9) of length between 1 and 3 in a given string")
 string = "1 la 12 tada 13 hey345eyey 3289"
