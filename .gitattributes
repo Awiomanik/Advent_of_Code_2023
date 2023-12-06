@@ -1,3 +1,6 @@
-2023* filter=git-crypt diff=git-crypt
-*.key filter=git-crypt diff=git-crypt
+# automatically set end of line in every file to be 
+# carrige return new line (standard for windows)
 * text=auto eol=crlf
+# encrypt files from 2023
+2023/** filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt

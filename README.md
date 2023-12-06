@@ -25,4 +25,3 @@ The solutions and code within this repository are my own and do not reflect the 
 All original content in this repository is provided under [LICENSE], which permits reuse under certain conditions. This does not extend to the Advent of Code content and trademarks, which remain the sole property of Eric Wastl and Advent of Code.
 
 *Happy coding, and enjoy the challenges!*:snowflake::star::christmas_tree:
-
