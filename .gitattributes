@@ -1,6 +1,8 @@
 # automatically set end of line in every file to be 
 # carrige return new line (standard for windows)
 * text=auto eol=crlf
-# encrypt files from 2023
-Solutions/2023/** filter=git-crypt diff=git-crypt
+# DO NOT REMOVE COMMENT BELOW IT IS USED AS A MARKER FOR HOOKS SCRIPT
+# BEGIN ENCRYPTION RULES
+Solutions/2023/Day09/** filter=git-crypt diff=git-crypt
+Solutions/2023/Day08/** filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
