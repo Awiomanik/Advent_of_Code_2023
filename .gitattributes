@@ -8,4 +8,6 @@ Solutions/2023/Day08/** filter=git-crypt diff=git-crypt
 Solutions/2023/Day07/** filter=git-crypt diff=git-crypt
 Solutions/2023/Day06/** filter=git-crypt diff=git-crypt
 Solutions/2023/Day04/** filter=git-crypt diff=git-crypt
+Solutions/2023/Day03/** filter=git-crypt diff=git-crypt
+Solutions/2023/Day02/** filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
