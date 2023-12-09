@@ -23,5 +23,8 @@ MANIFEST
 #DATA.txt
 #EVENT.py
 
+# unfinnished solutions
+*?x/
+
 # notebooks for testing
 TEST.ipynb
