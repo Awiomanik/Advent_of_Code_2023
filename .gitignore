@@ -18,11 +18,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# 2023 solutions
-# delete when rady to post
-#DATA.txt
-#EVENT.py
-
 # unfinnished solutions
 *?x/
 
