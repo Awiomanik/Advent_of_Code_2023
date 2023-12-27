@@ -5,6 +5,7 @@
 # build it as a class 
 
 import shutil
+import time
 
 def loading_bar_init():
     pass
