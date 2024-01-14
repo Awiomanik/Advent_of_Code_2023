@@ -18,6 +18,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# compiled python modules
+*.pyc
+
 # unfinnished solutions
 *?x/
 
