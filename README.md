@@ -18,10 +18,10 @@ While this is a personal repository, suggestions, optimizations, and discussions
 ### Disclaimer
 This repository is not affiliated with, endorsed by, or sponsored by the official Advent of Code event or its creator, Eric Wastl. It is a personal project created for the purpose of tracking and sharing my individual solutions to the puzzles presented in the Advent of Code challenges.
 
-Advent of Code is a registered trademark of Eric Wastl in the United States. This repository does not replicate the puzzle descriptions or any proprietary material from the Advent of Code website. Instead, it contains only my original solutions and, where necessary, summaries or references to the problems. Full puzzle descriptions and official content can be found on the [official Advent of Code 2023 website](https://adventofcode.com/2023).
+Advent of Code is a registered trademark of Eric Wastl in the United States. This repository does not replicate the puzzle descriptions or any proprietary material from the Advent of Code website. Instead, it contains only my original solutions and, where necessary, summaries or references to the problems. Full puzzle descriptions and official content can be found on the [official Advent of Code 2023 website](https://adventofcode.com/2024).
 
 The solutions and code within this repository are my own and do not reflect the views or opinions of Eric Wastl or the official Advent of Code event. The solutions are provided for educational purposes and as a resource for others participating in the Advent of Code challenges. Please use them responsibly and in the spirit of the event, which encourages individual problem-solving and learning.
 
-All original content in this repository is provided under [LICENSE], which permits reuse under certain conditions. This does not extend to the Advent of Code content and trademarks, which remain the sole property of Eric Wastl and Advent of Code.
+All original content in this repository is provided under [LICENSE](LICENSE), which permits reuse under certain conditions. This does not extend to the Advent of Code content and trademarks, which remain the sole property of Eric Wastl and Advent of Code.
 
 *Happy coding, and enjoy the challenges!*:snowflake::star::christmas_tree:
