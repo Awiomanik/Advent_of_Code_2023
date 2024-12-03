@@ -7,7 +7,7 @@
 
 This repository contains my personal solutions for the Advent of Code challenges. Advent of Code is an annual series of programming puzzles created by Eric Wastl that cover a variety of topics, intended to challenge and entertain coders around the world. Each day from December 1st to December 25th, a new puzzle is released, and this repository is my journey through these challenges.
 
-Read more about the challenge here: https://adventofcode.com/2023/about 
+Read more about the challenge here: https://adventofcode.com/2024/about 
 
 ### Usage
 Feel free to browse through the solutions. You can use these as references, learning materials, or just for curiosity's sake. If you're participating in Advent of Code, I encourage you to try solving the problems on your own before looking at my solutions!
