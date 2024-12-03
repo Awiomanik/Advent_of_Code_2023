@@ -1,5 +1,5 @@
 **Notice:**
-> **I plan to upload the solutions for this year's challenges (2023) after a suitable period has elapsed. This is to avoid spoiling the experience for those who are actively participating in the competition.**
+> **I plan to upload the solutions for this year's challenges (2024) after a suitable period has elapsed. This is to avoid spoiling the experience for those who are actively participating in the competition.**
 
 <br/>
 
