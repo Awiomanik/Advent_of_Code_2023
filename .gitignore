@@ -18,6 +18,13 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# python precompiled files
+__pycache__/
+
+# vc code
+.vscode/
+
+
 # compiled python modules
 *.pyc
 
