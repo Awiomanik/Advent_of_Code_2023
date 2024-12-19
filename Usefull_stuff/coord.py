@@ -22,6 +22,7 @@ Key Features:
 4. **Advanced Operations**:
    - Compute the magnitude of the coordinate (distance from origin).
    - Calculate the dot product with another `COORD`.
+   - Check if `COORD` is inside a gride of given bounds
 
 5. **Error Handling**:
    - Ensures all operations involve valid types (`COORD`, `int`, or `float`).
@@ -59,11 +60,18 @@ Both components (x and y) must satisfy the condition for the comparison to be tr
 
 class COORD:
     # Constructor
-    def __init__(self, x, y):
-        if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
-            raise TypeError("COORD must be integers or floats")
-        self.x = x
-        self.y = y
+    def __init__(self, x, y=None):
+        # Handle initialization from a tuple
+        if isinstance(x, tuple) and len(x) == 2:
+            if not all(isinstance(i, (int, float)) for i in x):
+                raise TypeError("COORD tuple elements must be integers or floats")
+            self.x, self.y = x
+        # Handle initialization from individual x, y values
+        elif isinstance(x, (int, float)) and isinstance(y, (int, float)):
+            self.x = x
+            self.y = y
+        else:
+            raise TypeError("COORD must be initialized with two integers or floats, or a tuple of two integers or floats")
 
     # Magic methods
     def __str__(self):
@@ -87,6 +95,8 @@ class COORD:
             return COORD(self.x + other.x, self.y + other.y)
         elif isinstance(other, (float, int)):
             return COORD(self.x + other, self.y + other)
+        elif isinstance(other, (list, tuple)) and len(other) > 1:
+            return COORD(self.x + other[0], self.y + other[1])
         raise TypeError("Operands must be of type 'COORD', 'int' or 'float'")
 
     def __sub__(self, other):
@@ -259,5 +269,81 @@ class COORD:
             return self.x * other.x + self.y * other.y
         raise TypeError("Operands must be of type 'Coordinate'")
 
+    # In bounds check
+    def inside(self, min_bound, max_bound=None) -> bool:
+        """
+        Determines if the current coordinate is within the specified bounds.
 
+        This method checks whether the current coordinate falls within the given
+        bounds. The bounds can be specified in various formats, including:
+        - A `Coord` object representing the (x, y) bounds.
+        - A tuple or list of length 2 where the first value represents the x-bound
+          and the second represents the y-bound.
+        - A single numeric value (int or float), which is treated as (value, value)
+          for both x and y.
+
+        If only one bound (`min_bound`) is provided, it is treated as the maximum 
+        bound, and the minimum bound defaults to (0, 0).
+
+        **Inclusive-Exclusive Behavior**:
+        The method uses inclusive comparison (`<=`) for the lower bound and
+        exclusive comparison (`<`) for the upper bound. Specifically:
+        - The x-coordinate must satisfy `min_bound[0] <= self.x < max_bound[0]`.
+        - The y-coordinate must satisfy `min_bound[1] <= self.y < max_bound[1]`.
+
+        Parameters:
+        ----------
+        min_bound : Coord, tuple, list, or numeric
+            The minimum bound for the coordinate. If `max_bound` is not provided,
+            this is treated as the maximum bound, and the minimum defaults to (0, 0).
+        
+        max_bound : Coord, tuple, list, or numeric, optional
+            The maximum bound for the coordinate. If not provided, defaults to `min_bound`.
+
+        Returns:
+        -------
+        bool
+            `True` if the current coordinate is within the specified bounds,
+            `False` otherwise.
+
+        Raises:
+        ------
+        ValueError
+            If `min_bound` or `max_bound` is not a valid input format.
+
+        Examples:
+        --------
+        # Assuming `self.x = 5` and `self.y = 10`
+        coord.inside((4, 9), (6, 11))  # True
+        coord.inside((5, 10))          # True (default min_bound is (0, 0))
+        coord.inside(5, 6)             # False (y=10 is out of range)
+        """
+        # Helper function to validate bounds
+        def validate_bound(bound, name):
+            if isinstance(bound, COORD):
+                return (bound.x, bound.y)
+            elif isinstance(bound, (tuple, list)) and len(bound) == 2:
+                return tuple(bound)
+            elif isinstance(bound, (int, float)):
+                return (bound, bound)
+            else:
+                raise ValueError(
+                    f"Invalid {name} bound: {bound}. Must be a Coord, "
+                    "a tuple/list of length 2, or a single number (int/float). "
+                    "Bounds should represent (x, y) where the first value is for x and the second for y."
+                )
+        # Check if bath bounds been passed
+        if max_bound == None:
+            max_bound = min_bound
+            min_bound = 0
+
+        # Validate and unpack bounds
+        min_bound = validate_bound(min_bound, "minimum")
+        max_bound = validate_bound(max_bound, "maximum")
+
+        # Check if the current coordinate is within the bounds
+        return (
+            min_bound[0] <= self.x < max_bound[0] and
+            min_bound[1] <= self.y < max_bound[1]
+        )
 
